@@ -3,14 +3,22 @@
 // Quando o botão é pressionado, a lista é lida
 document.querySelector("#start").addEventListener('click', ()=> {
 
-document.querySelector("#code").innerHTML = '';
-
-// Declaração de variáveis
+    // Declaração de variáveis
     var even_list = [];
     var odd_list = [];
     var count = 0;
 
-// Loop que designa pares e ímpares para suas listas
+    for (var i = 1; i < 15; i ++) {
+        console.log(i);
+        if (document.querySelector("#n" + i).value == '') {
+            alert("Um ou mais entradas vazias!");
+            return;
+        }
+    }
+
+    document.querySelector("#code").innerHTML = '';
+
+    // Loop que designa pares e ímpares para suas listas
     for (var i = 1; i < 16; i++) {
         if (parseInt(document.querySelector("#n" + i).value) % 2 == 0) {
             even_list.push(parseInt(document.querySelector("#n" + i).value));
