@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Robot Rally</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>ROBOT RALLY</h1>
+        </header>
+        <section>
+            <article>
+                <h2>Instruções</h2>
+                <p>O Rally do robôs é um pequeno jogo onde você deve criar uma arena com obstáculos e recompensas, fornecendo também os comandos para que o robô colete todos os prêmios. Como saída, o programa retornará o número de recompensas coletadas.</p>
+                <p>Você deve fornecer o número de colunas e linhas da arena, bem como a posição inicial,orientação do robô, número e sequência de comandos. Com todos os valores inseridos de forma válida, basta clicar no botão "Start".</p>
+                <p>Certifique-se de que a arena está com o número de linhas e colunas correto.</p>
+                <div>
+                    <p>A arena é composta por 3 elementos:</p>
+                    <ul>
+                        <li>Bloco vazio: <span>.</span> (ponto)</li>
+                        <li>Obstáculo: <span>#</span> (hashtag)</li>
+                        <li>Recompensa: <span>*</span> (asterisco)</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>O robô possui 4 representações que também indicam sua orientação (norte, sul, leste e oeste).</p>
+                    <ul>
+                        <li>Norte: <span>N</span></li>
+                        <li>Sul: <span>S</span></li>
+                        <li>Leste: <span>L</span></li>
+                        <li>Oeste: <span>O</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Existem 3 tipos de comandos válidos:</p>
+                    <ul>
+                        <li>Para frente: <span>F</span></li>
+                        <li>90º para a esquerda: <span>E</span></li>
+                        <li>90º para a direita: <span>D</span></li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        <section id="regular_inputs">
+            <label>Colunas (1 até 100)
+                <input type="number" name="cols" id="col" placeholder="Columns" pattern="\d*" maxlength="4">
+            </label>
+            <label>Linhas (1 até 100)
+                <input type="number" name="rows" id="row" placeholder="Rows">
+            </label>
+            <label> Número de comandos (1 até 5 x 10 ^ 4)
+                <input type="number" name="commands" id="command_number" placeholder="Number of commands">
+            </label>
+        </section>
+
+        <section id="text_inputs">
+            <label> Comandos
+                <textarea name="commands" id="commands" cols="35" rows="5" placeholder="Commands sequence"></textarea>
+            </label>
+            <label> Arena
+                <textarea name="text" id="text" cols="35" rows="35" placeholder="Arena"></textarea>
+            </label>
+            <button id="start">START</button>
+        </section>
+
+        <section id="output">
+            <p id="result"></p>
+            <h2>Saída</h2>
+        </section>
+    </main>
+
+    
+    
+    
+    
+</body>
+<script src="./main.js"></script>
+</html>
